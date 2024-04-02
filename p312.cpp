@@ -92,3 +92,29 @@ using namespace std;
 //     cin >> a;
 //     cout << shma(a, checkEven(a));
 // }
+
+// // ЗАДАЧА https://codeforces.com/contest/751/problem/A
+// int main()
+// {
+//     int n, shma = 0, gifts = 0;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] > 3)
+//             shma++;
+//         else
+//             shma = 0;
+
+//         if (shma == 3)
+//         {
+//             gifts++;
+//             shma = 0;
+//         }
+//     }
+//     cout << gifts;
+// }
