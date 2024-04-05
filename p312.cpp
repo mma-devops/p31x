@@ -118,3 +118,78 @@ using namespace std;
 //     }
 //     cout << gifts;
 // }
+
+
+// // ЗАДАЧА https://codeforces.com/contest/752/problem/A
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int a[n] = {0};
+//     int deti = 0;
+//     for (int i = 1; i + 1 <= n - i; i++)
+//     {
+//         a[deti++] = 1;
+//         n -= i;
+//     }
+//     if (n > 0)
+//     {
+//         a[deti++] = n;
+//     }
+//     cout << deti << endl;
+//     for (int j = 0; j < deti; j++)
+//     {
+//         cout << a[j] << " ";
+//     }
+// }
+
+
+// // ЗАДАЧА https://codeforces.com/contest/755/problem/A
+// bool notprime(int a)
+// {
+//     for (int i = 2; i <= a / 2; i++)
+//     {
+//         if (a % i == 0)
+//             return true;
+//     }
+//     return false;
+// }
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     for (int i = 1; i < 1001; i++)
+//     {
+//         if (notprime(n * i + 1))
+//         {
+//             cout << i << endl;
+//             break;
+//         }
+//     }
+// }
+
+
+// // Задача написать функцию, которая проверяет являются ли
+// // цифры в двузначных числах однаковыми. Сделать проверку на ввод ТОЛЬКО ДВУЗНАЧНОГО числа */
+// bool check(int a){
+//     if (a % 10 == a / 10){
+//         return true;
+//     }
+//     return false;
+// }
+// int main(){
+//     int a;
+//     cin >> a;
+//     if (a > 9 && a < 100){
+//         if (check(a)){
+//             cout << "same numbers";
+//         }
+//         else{
+//             cout << "idi naxuy";
+//         }
+//     }
+//     else{
+//         cout << "debil";
+//     }
+// }
