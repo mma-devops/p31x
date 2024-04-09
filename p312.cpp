@@ -119,7 +119,6 @@ using namespace std;
 //     cout << gifts;
 // }
 
-
 // // ЗАДАЧА https://codeforces.com/contest/752/problem/A
 // int main()
 // {
@@ -142,7 +141,6 @@ using namespace std;
 //         cout << a[j] << " ";
 //     }
 // }
-
 
 // // ЗАДАЧА https://codeforces.com/contest/755/problem/A
 // bool notprime(int a)
@@ -169,7 +167,6 @@ using namespace std;
 //     }
 // }
 
-
 // // Задача написать функцию, которая проверяет являются ли
 // // цифры в двузначных числах однаковыми. Сделать проверку на ввод ТОЛЬКО ДВУЗНАЧНОГО числа */
 // bool check(int a){
@@ -193,3 +190,32 @@ using namespace std;
 //         cout << "debil";
 //     }
 // }
+
+// https://codeforces.com/contest/768/problem/A
+
+int main()
+{
+    int n, a;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    int max = arr[0];
+    int min = arr[0];
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < min)
+            min = arr[i];
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    int c = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < max && arr[i] > min)
+            c++;
+    }
+    cout << c;
+}
