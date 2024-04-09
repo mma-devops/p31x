@@ -191,31 +191,30 @@ using namespace std;
 //     }
 // }
 
-// https://codeforces.com/contest/768/problem/A
-
-int main()
-{
-    int n, a;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    int max = arr[0];
-    int min = arr[0];
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] < min)
-            min = arr[i];
-        if (arr[i] > max)
-            max = arr[i];
-    }
-    int c = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] < max && arr[i] > min)
-            c++;
-    }
-    cout << c;
-}
+// // https://codeforces.com/contest/768/problem/A
+// int main()
+// {
+//     int n, a;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int max = arr[0];
+//     int min = arr[0];
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] < min)
+//             min = arr[i];
+//         if (arr[i] > max)
+//             max = arr[i];
+//     }
+//     int c = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] < max && arr[i] > min)
+//             c++;
+//     }
+//     cout << c;
+// }
