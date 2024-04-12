@@ -218,3 +218,53 @@ using namespace std;
 //     }
 //     cout << c;
 // }
+
+
+// // ТЕСТ
+// int main()
+// {
+//     const int N = 7;
+//     string questions[N]{"\nЧВК лох?\n1. да\n2. да\n3. да\n4. да\n", "\nЧВК лох?\n1. да\n2. да\n3. да\n4. да\n", "\nЧВК лох?\n1. да\n2. да\n3. да\n4. да\n", "\nЧВК лох?\n1. да\n2. да\n3. да\n4. да\n", "\nЧВК лох?\n1. да\n2. да\n3. да\n4. да\n", "\nЧВК лох?\n1. да\n2. да\n3. да\n4. да\n", "\nЧВК лох?\n1. да\n2. да\n3. да\n4. да\n"};
+//     int answers[N]{1, 1, 1, 1, 1, 1, 1};
+//     int a, c = 0;
+//     for (int i = 0; i < N; i++)
+//     {
+//         cout << questions[i];
+//         cin >> a;
+//         switch (a == answers[i])
+//         {
+//         case true:
+//             cout << "+";
+//             c++;
+//             break;
+
+//         default:
+//             cout << "-";
+//             break;
+//         }
+//     }
+//     printf("\n%d верных ответов из %d", c, N);
+// }
+
+
+// РАСЧЁТ ЗАРПЛАТЫ С ПРЕМИЕЙ В ЗАВИСИМОТИ ОТ СТАЖА
+int main(){
+    string surname;
+    int exp, salary, hours;
+    cout << "Фамилия: ";
+    getline(cin, surname);
+    cout << "Стаж работы: ";
+    cin >> exp;
+    cout << "Зарплата за час работы: ";
+    cin >> salary;
+    cout << "Отработанные часы: ";
+    cin >> hours;
+    if (exp < 1)
+        cout << salary * hours;
+    else if (exp >= 1 and exp < 3)
+        cout << salary * hours * 1.05;
+    else if (exp >= 3 and exp < 5)
+        cout << salary * hours * 1.08;
+    else if (exp >= 5)
+        cout << salary * hours * 1.15;
+}
