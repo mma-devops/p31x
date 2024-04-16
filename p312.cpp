@@ -219,7 +219,6 @@ using namespace std;
 //     cout << c;
 // }
 
-
 // // ТЕСТ
 // int main()
 // {
@@ -246,25 +245,89 @@ using namespace std;
 //     printf("\n%d верных ответов из %d", c, N);
 // }
 
+// // РАСЧЁТ ЗАРПЛАТЫ С ПРЕМИЕЙ В ЗАВИСИМОТИ ОТ СТАЖА
+// int main(){
+//     string surname;
+//     int exp, salary, hours;
+//     cout << "Фамилия: ";
+//     getline(cin, surname);
+//     cout << "Стаж работы: ";
+//     cin >> exp;
+//     cout << "Зарплата за час работы: ";
+//     cin >> salary;
+//     cout << "Отработанные часы: ";
+//     cin >> hours;
+//     if (exp < 1)
+//         cout << salary * hours;
+//     else if (exp >= 1 and exp < 3)
+//         cout << salary * hours * 1.05;
+//     else if (exp >= 3 and exp < 5)
+//         cout << salary * hours * 1.08;
+//     else if (exp >= 5)
+//         cout << salary * hours * 1.15;
+// }
 
-// РАСЧЁТ ЗАРПЛАТЫ С ПРЕМИЕЙ В ЗАВИСИМОТИ ОТ СТАЖА
-int main(){
-    string surname;
-    int exp, salary, hours;
-    cout << "Фамилия: ";
-    getline(cin, surname);
-    cout << "Стаж работы: ";
-    cin >> exp;
-    cout << "Зарплата за час работы: ";
-    cin >> salary;
-    cout << "Отработанные часы: ";
-    cin >> hours;
-    if (exp < 1)
-        cout << salary * hours;
-    else if (exp >= 1 and exp < 3)
-        cout << salary * hours * 1.05;
-    else if (exp >= 3 and exp < 5)
-        cout << salary * hours * 1.08;
-    else if (exp >= 5)
-        cout << salary * hours * 1.15;
-}
+// // Пользователь вводит 2 числа:
+// // Первое число: кол-во чисел массива
+// // Второе число: первое число массива
+// int main(){
+//     int n, f;
+//     cin >> n >> f;
+//     int arr[n];
+
+//     // 1 ВАРИК
+//     // for (int i = f; i < n + f; i++){
+//     //     int j = 0;
+//     //     arr[j] = i;
+//     //     j++;
+//     // }
+
+//     // 2 ВАРИК
+//     // for (int i = 0; i < n; i++){
+//     //     arr[i] = f;
+//     //     f++;
+//     // }
+
+//     for (int i = 0; i < n; i++){
+//         cout << arr[i] << ' ';
+//     }
+// }
+
+// // Создать массив из 16 чисел в диапозоне [-9:9]
+// // Вывести чётные числа по возрастанию,
+// // Нечетные по убыванию.
+// int main()
+// {
+//     const int N = 16;
+//     srand(time(NULL));
+//     int arr[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         arr[i] = rand() % 19 - 9;
+//         cout << arr[i] << ' ';
+//     }
+//     for (int i = 0; i < N - 1; i++)
+//     {
+//         for (int j = 0; j < N - i - 1; j++)
+//         {
+//             if (arr[j] > arr[j + 1])
+//             {
+//                 int temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+//     cout << endl;
+//     for (int i = 0; i < N; i++){
+//         if (arr[i] % 2 == 0){
+//             cout << arr[i] << ' ';
+//         }
+//     }
+//     cout << endl;
+//     for (int i = N; i > 0; i--){
+//         if (arr[i] % 2 != 0){
+//             cout << arr[i] << ' ';
+//         }
+//     }
+// }
