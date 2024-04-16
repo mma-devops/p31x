@@ -10,7 +10,8 @@ using namespace std;
 // ФУНКЦЫИИИ)))
 // сначала выбираем тип возвращаемого значения, потом название функции
 // потом создаём переменную (в скобочках))00) которая работает строго внутри данной функции
-int funcia_xd(int a, int b, string c){
+int funcia_xd(int a, int b, string c)
+{
     // чето делаем))
     a = a + b;
     // возвращаем значение в место вызова функции
@@ -18,10 +19,10 @@ int funcia_xd(int a, int b, string c){
 }
 
 // void функция (БЕЗДНА) нече не возвращает) (строение функции такое же)
-void gawnina(string a){
+void gawnina(string a)
+{
     cout << a << ' ' << "yarick";
 }
-
 
 // Инициализация главной функции main с нашим кодом.
 int main()
@@ -208,5 +209,19 @@ int main()
     case true: // вместо "true" можно взять любое другое число 1,2,3... так как "false" - это только ноль
         cout << "ЕТО НУЛЬ";
         break;
+    }
+
+    // buble sort
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+        }
     }
 }
