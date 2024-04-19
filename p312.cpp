@@ -331,3 +331,46 @@ using namespace std;
 //         }
 //     }
 // }
+
+
+// // Написать программу, которая вводит
+// // двумерный массив и вычисляет сумму
+// // его элементов по столбцам и двум диагоналям.
+// int main()
+// {
+//     int arr[7][7];
+//     srand(time(NULL));
+//     for (int i = 0; i < 7; i++)
+//     {
+//         for (int j = 0; j < 7; j++)
+//         {
+//             arr[i][j] = rand() % 10;
+//             cout << arr[i][j] << ' ';
+//         }
+//         cout << endl;
+//     }
+//     int sum = 0;
+//     for (int i = 0; i < 7; i++)
+//     {
+//         for (int j = 0; j < 7; j++)
+//         {
+//             sum += arr[j][i];
+//         }
+//         cout << sum << ' ';
+//         sum = 0;
+//     }
+//     cout << endl;
+//     for (int i = 0; i < 7; i++)
+//     {
+//         sum += arr[i][i];
+//     }
+//     cout << sum << endl;
+//     sum = 0;
+//     int j = 6;
+//     for (int i = 0; i < 7; i++)
+//     {
+//         sum += arr[i][j];
+//         j--;
+//     }
+//     cout << sum;
+// }
