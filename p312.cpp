@@ -374,40 +374,122 @@ using namespace std;
 //     cout << sum;
 // }
 
-// Создать и вывести массив из 16 чисел [-8:8]
-// Написать функцию которая принимает этот массив
-// по указателю и выводит '+' или '-' в
-// зависимости от знака элемента (если 0 то '=')
+// // Создать и вывести массив из 16 чисел [-8:8]
+// // Написать функцию которая принимает этот массив
+// // по указателю и выводит '+' или '-' в
+// // зависимости от знака элемента (если 0 то '=')
 
-void sidr(int *arr, int N)
-{
-    for (int i = 0; i < N; i++)
-    {
-        if (*(arr + i) > 0)
-        {
-            cout << "+ ";
-        }
-        else if (*(arr + i) < 0)
-        {
-            cout << "- ";
-        }
-        else
-        {
-            cout << "= ";
-        }
-    }
-}
+// void sidr(int *arr, int N)
+// {
+//     for (int i = 0; i < N; i++)
+//     {
+//         if (*(arr + i) > 0)
+//         {
+//             cout << "+ ";
+//         }
+//         else if (*(arr + i) < 0)
+//         {
+//             cout << "- ";
+//         }
+//         else
+//         {
+//             cout << "= ";
+//         }
+//     }
+// }
 
-int main()
-{
-    srand(time(NULL));
-    const int N = 16;
-    int arr[N];
-    for (int i = 0; i < N; i++)
-    {
-        arr[i] = rand() % 17 - 8;
-        cout << *(arr + i) << ' ';
-    }
-    cout << endl;
-    sidr(arr, N);
-}
+// int main()
+// {
+//     srand(time(NULL));
+//     const int N = 16;
+//     int arr[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         arr[i] = rand() % 17 - 8;
+//         cout << *(arr + i) << ' ';
+//     }
+//     cout << endl;
+//     sidr(arr, N);
+// }
+
+// // Написать примитивный калькулятор, пользуясь только указателями.
+
+// void add(int *a, int *b)
+// {
+//     cout << *a + *b;
+// }
+// void sub(int *a, int *b)
+// {
+//     cout << *a - *b;
+// }
+// void multi(int *a, int *b)
+// {
+//     cout << *a * *b;
+// }
+// void div(int *a, int *b)
+// {
+//     cout << *a / *b;
+// }
+
+// int main()
+// {
+//     int a, b;
+//     char c;
+//     cin >> a >> c >> b;
+//     if (c == '+')
+//         add(&a, &b);
+//     else if (c == '-')
+//         sub(&a, &b);
+//     else if (c == '*')
+//         multi(&a, &b);
+//     else if (c == '/')
+//         div(&a, &b);
+//     else
+//         cout << "DUYAK";
+// }
+
+// // Даны два массива: А[M] и B[N] (M и N вводятся с клавиатуры).
+// // Необходимо создать третий массив минимально возможного размера,
+// // в котором нужно собрать элементы обоих массивов.
+
+// void gawno(int *a, int *b, int *c, int *m, int *n)
+// {
+//     int j = 0, k = 0;
+//     for (int i = 0; i < *m + *n; i++)
+//     {
+//         if (i < *m)
+//         {
+//             *(c + i) = *(a + j);
+//             j++;
+//         }
+//         else
+//         {
+//             *(c + i) = *(b + k);
+//             k++;
+//         }
+//         cout << *(c + i) << ' ';
+//     }
+// }
+
+// int main()
+// {
+//     srand(time(NULL));
+//     int m, n;
+//     cin >> m >> n;
+//     int a[m];
+//     int b[n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         a[i] = rand() % 21 - 10;
+//         cout << a[i] << ' ';
+//     }
+//     cout << endl;
+//     for (int i = 0; i < n; i++)
+//     {
+//         b[i] = rand() % 21 - 10;
+//         cout << b[i] << ' ';
+//     }
+//     cout << endl;
+//     int c[m + n];
+//     gawno(a, b, c, &m, &n);
+// }
