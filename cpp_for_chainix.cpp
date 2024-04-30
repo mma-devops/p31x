@@ -313,4 +313,8 @@ int main()
         }
         cout << min;
     }
+
+    // new и delete:
+    // https://www.youtube.com/watch?v=vtslSm2GA9w
+    // так же смотрим пример заданий из файла с кодом с пар строка 497-585
 }

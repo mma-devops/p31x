@@ -493,3 +493,93 @@ using namespace std;
 //     int c[m + n];
 //     gawno(a, b, c, &m, &n);
 // }
+
+// // Написать функцию, которая получает указатель
+// // на массив и его размер, и возвращает сумму и
+// // произведение его элементов в двух параметрах-указателях.
+
+// int *gawno(int *arr, int *N)
+// {
+//     int *sum = new int;
+//     *sum = 0;
+//     int *multi = new int;
+//     *multi = 1;
+//     for (int i = 0; i < *N; i++)
+//     {
+//         *sum += *(arr + i);
+//         *multi *= *(arr + i);
+//     }
+//     int *arr2 = new int[2];
+//     *(arr2 + 0) = *sum;
+//     *(arr2 + 1) = *multi;
+//     return arr2;
+//     delete sum, multi, arr2;
+// }
+
+// int main()
+// {
+//     srand(time(NULL));
+//     int N = 10;
+//     int *arr = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         *(arr + i) = rand() % 21 - 10;
+//         cout << *(arr + i) << ' ';
+//     }
+//     cout << endl << *gawno(arr, &N) << endl;
+//     cout << *(gawno(arr, &N) + 1);
+//     delete arr;
+// }
+
+// // Написать функцию, которая получает
+// // указатель на массив и его размер,
+// // и возвращает количество отрицательных,
+// // положительных и нулевых элементов массива.
+// int *func(int *arr, int *N)
+// {
+//     int *pos = new int;
+//     int *neg = new int;
+//     int *zero = new int;
+//     *pos = 0;
+//     *neg = 0;
+//     *zero = 0;
+//     for (int i = 0; i < *N; i++)
+//     {
+//         if (*(arr + i) > 0)
+//         {
+//             *pos += 1;
+//         }
+//         else if (*(arr + i) < 0)
+//         {
+//             *neg += 1;
+//         }
+//         else
+//         {
+//             *zero += 1;
+//         }
+//     }
+//     int *massiv = new int[3];
+//     *massiv = *pos;
+//     *(massiv + 1) = *neg;
+//     *(massiv + 2) = *zero;
+//     return massiv;
+//     delete pos, neg, zero, massiv;
+// }
+
+// int main()
+// {
+//     srand(time(NULL));
+//     int N = 10;
+//     int *arr = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         *(arr + i) = rand() % 21 - 10;
+//         cout << *(arr + i) << ' ';
+//     }
+//     cout << endl;
+//     for (int i = 0; i < 3; i++)
+//     {
+//         cout << *(func(arr, &N) + i) << ' ';
+//     }
+//     delete arr;
+// }
