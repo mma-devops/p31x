@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <windows.h>
 using namespace std;
 
 // int main()
@@ -584,7 +585,6 @@ using namespace std;
 //     delete arr;
 // }
 
-
 // // Напишите программу, в которой пользователь вводит размер массива, и программа динамически
 // // выделяет массив такого размера для хранения значений типа int. Используя указатель, инициализируйте
 // // все элементы массива так, чтобы значение элемента по индексу i было равно i * i (то есть квадрату числа i).
@@ -667,7 +667,6 @@ using namespace std;
 //     delete[] arr;
 // }
 
-
 // // Создание и вывод двумерного динамического массива
 // int main()
 // {
@@ -687,4 +686,104 @@ using namespace std;
 //         }
 //         cout << endl;
 //     }
+// }
+
+// // Массив из 10 чисел в диапозоне [-10;10]
+// // Найти сумму ВТОРОГО минимального и ВТОРОГО максимального.
+// void zabiv(int* arr, int* N){
+//     for (int i = 0; i < *N; i++){
+//         *(arr + i) = rand() % 21 - 10;
+//     }
+// }
+
+// void sort(int* arr, int* N){
+//     int *temp = new int;
+//     for (int i = 0; i < *N-1; i++){
+//         for(int j = 0; j < *N-1-i; j++){
+//             if (arr[j] > arr[j+1]){
+//                 *temp = arr[j];
+//                 arr[j] = arr[j+1];
+//                 arr[j+1] = *temp;
+//             }
+//         }
+//     }
+// }
+
+// void printarr(int* arr, int* N){
+//     for (int i = 0; i < *N; i++){
+//         cout << arr[i] << ' ';
+//     }
+//     cout << endl;
+// }
+
+// int main(){
+//     srand(time(NULL));
+//     int *N = new int;
+//     *N = 10;
+//     int *arr = new int[*N];
+//     zabiv(arr, N);
+//     printarr(arr, N);
+//     sort(arr, N);
+//     printarr(arr, N);
+//     cout << arr[1] + arr[*N-2];
+// }
+
+
+// // Вам нужно определить на какую линую пойти (мид, сложная, легкая, лес)
+// // Необходимо ввести имя героя и его статы (ловкость, сила, интеллект).
+// // Если ловкость главный атрибут (больше остальных параметров)
+// // то герой идет на легкую.
+// // Если сила главный атрибут, то герой идет на сложную.
+// // Если интеллект главный атрибут, то герой идет в мид.
+// // Если все атрибуты равны, то идет в лес.
+// // Если атрибут меньше либо равен нулю, то герой получает БАН.
+// // НЕ РАБОТАЕ
+// string* checkLine(int* AGI, int* STR, int* INT){
+//     string* line = new string;
+//     if(*AGI > *STR && *AGI > *INT){
+//         *line = "EASY";
+//         return line;
+//     }
+//     else if(*STR > *AGI && *STR > *INT){
+//         *line = "HARD";
+//         return line;
+//     }
+//     else if(*INT > *AGI && *INT > *STR){
+//         *line = "MID";
+//         return line;
+//     }
+//     else if(*AGI == *STR && *AGI == *INT){
+//         *line = "JUNGLE";
+//         return line;
+//     }
+//     *line = "BAN";
+//     return line;
+//     delete line;
+// }
+
+// void printLine(string* name, string* lane){
+//     if(*lane == "BAN"){
+//         printf("Player %s should go fuck himself xd. BANNED.", *name);
+//     }
+//     else{
+//         printf("Player %s should go to %s lane.", *name, *lane);
+//     }
+// }
+
+// int main()
+// {
+//     cout << "Name: ";
+//     string *name = new string;
+//     cin >> *name;
+//     cout << "AGI: ";
+//     int *AGI = new int;
+//     cin >> *AGI;
+//     cout << "STR: ";
+//     int *STR = new int;
+//     cin >> *STR;
+//     cout << "INT: ";
+//     int *INT = new int;
+//     cin >> *INT;
+//     printLine(name, checkLine(AGI, STR, INT));
+//     delete name, AGI, STR, INT;
 // }
