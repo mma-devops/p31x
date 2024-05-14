@@ -728,7 +728,6 @@ using namespace std;
 //     cout << arr[1] + arr[*N-2];
 // }
 
-
 // // Вам нужно определить на какую линую пойти (мид, сложная, легкая, лес)
 // // Необходимо ввести имя героя и его статы (ловкость, сила, интеллект).
 // // Если ловкость главный атрибут (больше остальных параметров)
@@ -786,4 +785,83 @@ using namespace std;
 //     cin >> *INT;
 //     printLine(name, checkLine(AGI, STR, INT));
 //     delete name, AGI, STR, INT;
+// }
+
+// // Написать функцию для рассчёта индекса массы тела (индекс массы = вес / рост^2 (В М3ТРАА4АААХ)).
+// // если индекс <= 18.5 return "МАЛА ВЕСИШ"
+// // если индекс <= 25.0 return "НАРМСАС НАРМАС"
+// // если индекс <= 30.0 return "ТОВСТЫЙ"
+// // если индекс > 30 return "ПИПЕС ТЫ ЖЫРНИЙ"
+// string weightIndex(int *weight, int *height)
+// {
+//     float *index = new float;
+//     *index = *weight / (*height * *height / 10000);
+//     if (*index <= 18.5)
+//         return "SOPLYA";
+//     else if (*index <= 25)
+//         return "MOLOKO NE VISOHLO";
+//     else if (*index <= 30)
+//         return "LEU";
+//     return "FEMKA";
+//     delete index;
+// }
+// int main()
+// {
+//     int *weight = new int;
+//     cin >> *weight;
+//     int *height = new int;
+//     cin >> *height;
+//     cout << weightIndex(weight, height);
+//     delete weight, height;
+// }
+
+// // Создать функцию которая проверяет является ли число нечетным.
+// // Числа забиваются в массив из 10 чисел [-10:10]
+// // Если да: умножить его на 3 и вернуть
+// // Если нет: разделить его на 2 и вернуть
+// // Если нуль: прибавить 861 и вернуть
+// // СТРОГО ЧЕРЕЗ SWITCH-CASE
+// int *caseShit(int *arr)
+// {
+//     int *jest = new int;
+//     switch (*arr % 2 != 0)
+//     {
+//     case true:
+//         *jest = *arr * 3;
+//         return jest;
+//         break;
+//     case false:
+//         switch (*arr == 0)
+//         {
+//         case true:
+//             *jest = 861;
+//             return jest;
+//             break;
+
+//         case false:
+//             *jest = *arr / 2;
+//             return jest;
+//             break;
+//         }
+//         delete jest;
+//     }
+// }
+// int main()
+// {
+//     srand(time(NULL));
+//     int *n = new int;
+//     *n = 10;
+//     int *arr = new int[*n];
+//     int *i = new int;
+//     for (*i = 0; *i < *n; *i += 1)
+//     {
+//         arr[*i] = rand() % 21 - 10;
+//         cout << arr[*i] << ' ';
+//     }
+//     cout << endl;
+//     for (*i = 0; *i < *n; *i += 1)
+//     {
+//         arr[*i] = *caseShit((arr + *i));
+//         cout << arr[*i] << ' ';
+//     }
 // }
