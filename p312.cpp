@@ -865,3 +865,97 @@ using namespace std;
 //         cout << arr[*i] << ' ';
 //     }
 // }
+
+// // Написать программу которая будет выводить последовательность Фибоначчи
+// // (складываются последние 2 числа).
+// // Певые 2 числа - 0, 1
+// // Длину последовательности задаёт пользователь.
+// // Если че можете загуглить: fibonacci sequence
+// void fibonacci(int* n){
+//     int* arr = new int[*n];
+//     arr[0] = 0;
+//     arr[1] = 1;
+//     int* c = new int;
+//     cout << arr[0] << ' ' << arr[1] << ' '; 
+//     for (int i = 2; i < *n; i++){
+//         arr[i] = arr[i-1] + arr[i-2];
+//         cout << arr[i] << ' ';
+//     }
+//     delete[] arr;
+// }
+// int main(){
+//     int* n = new int;
+//     cin >> *n;
+//     fibonacci(n);
+//     delete n;
+// }
+
+
+// // Через цикл создать массив из 16 чисел в диапазоне [-16:12]
+// // Вывести этот массив.
+// // 1. Вывести все нечетные числа массива. (VOID ФУНКЦИЯ)
+// // 2. Вывести кол-во элементов массива, превосходящих по модулю максимальный элемент. // #include <cmath>; abs(); (INT)
+// // 3. Вывести произведение второго, пятого и предпоследнего элемента массива. (INT)
+// // 4. Максимальный из отрицательных элементов поменять местами с последним элементом массива и вывести. (VOID)
+// void firstFunc(int* arr){
+//     for(int i = 0; i < 16; i++){
+//         if (*(arr+i) % 2 != 0){
+//             cout << *(arr+i) << ' ';
+//         }
+//     }
+// }
+// int* secondFunc(int* arr){
+//     int* max = new int;
+//     int* c = new int;
+//     *max = *arr;
+//     *c = 0;
+//     for(int i = 0; i < 16; i++){
+//         if (*(arr+i) > *max){
+//             *max = *(arr+i);
+//         }
+//     }
+//     for(int i = 0; i < 16; i++){
+//         if (abs(*(arr+i)) > *max){
+//             *c += 1;
+//         }
+//     }
+//     return c;
+//     delete max, c;
+// }
+// int* thirdFunc(int* arr){
+//     int* a = new int;
+//     *a = *(arr+1) * *(arr+4) * *(arr+14);
+//     return a;
+//     delete a;
+// }
+// void fourthFunc(int* arr){
+//     int* maxNeg = new int;
+//     int* temp = new int;
+//     int* index = new int;
+//     *maxNeg = *arr;
+//     for(int i = 0; i < 16; i++){
+//         if(*(arr+i) > *maxNeg && *(arr+i) < 0){
+//             *maxNeg = *(arr+i);
+//             *index = i;
+//         }
+//     }
+//     *temp = *(arr+ *index);
+//     *(arr+ *index) = *(arr+15);
+//     *(arr+15) = *temp;
+//     for(int i = 0; i <  16; i++){
+//         cout << arr[i] << ' ';
+//     }
+//     delete maxNeg, temp, index;
+// }
+// int main(){
+//     int* arr = new int[16];
+//     srand(time(NULL));
+//     for(int i = 0; i <  16; i++){
+//         arr[i] = rand() % 29 - 16;
+//         cout << arr[i] << ' ';
+//     }
+//     firstFunc(arr);
+//     cout << endl << *secondFunc(arr);
+//     cout << endl << *thirdFunc(arr) << endl;
+//     fourthFunc(arr);
+// }
