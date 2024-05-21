@@ -876,7 +876,7 @@ using namespace std;
 //     arr[0] = 0;
 //     arr[1] = 1;
 //     int* c = new int;
-//     cout << arr[0] << ' ' << arr[1] << ' '; 
+//     cout << arr[0] << ' ' << arr[1] << ' ';
 //     for (int i = 2; i < *n; i++){
 //         arr[i] = arr[i-1] + arr[i-2];
 //         cout << arr[i] << ' ';
@@ -889,7 +889,6 @@ using namespace std;
 //     fibonacci(n);
 //     delete n;
 // }
-
 
 // // Через цикл создать массив из 16 чисел в диапазоне [-16:12]
 // // Вывести этот массив.
@@ -958,4 +957,105 @@ using namespace std;
 //     cout << endl << *secondFunc(arr);
 //     cout << endl << *thirdFunc(arr) << endl;
 //     fourthFunc(arr);
+// }
+
+
+// // Создать класс для треугольника который имеет 2 свойства: длины сторон, величины углов.
+// // Создать методы:
+// // Существует ли треугольник (bool)
+// // Найти периметр (int)
+// // Проверить является ли он прямоугольным (bool)
+// // (ЕСЛИ ДА) Найти площадь (int)
+// // Является ли он равнобедренным (bool)
+// // Является ли он равносторонним (bool)
+// class Triangle
+// {
+// public:
+//     int side1, side2, side3;
+//     int angle1, angle2, angle3;
+//     int S = 0;
+//     bool Existance()
+//     {
+//         if (side1 + side2 >= side3 && side2 + side3 >= side1 && side1 + side3 >= side2 && angle1 + angle2 + angle3 == 180)
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+//     int P()
+//     {
+//         if (Existance()){
+//             return side1 + side2 + side3;
+//         }
+//         return 0;
+//     }
+//     bool RightVersion()
+//     {
+//         if (Existance())
+//         {
+//             if (angle1 == 90 || angle2 == 90 || angle3 == 90)
+//             {
+//                 return true;
+//             }
+//             return false;
+//         }
+//         return false;
+//     }
+//     int aSS()
+//     {
+//         if (RightVersion())
+//         {
+//             if (side1 > side2 && side1 > side3)
+//             {
+//                 S = (side2 * side3) / 2;
+//                 return S;
+//             }
+//             else if (side2 > side1 && side2 > side3)
+//             {
+//                 S = (side1 * side3) / 2;
+//                 return S;
+//             }
+//             S = (side1 * side2) / 2;
+//             return S;
+//         }
+//         return S;
+//     }
+//     bool Ravnobedr()
+//     {
+//         if (Existance())
+//         {
+//             if (angle1 == angle2 || angle2 == angle3 || angle1 == angle3)
+//             {
+//                 return true;
+//             }
+//             return false;
+//         }
+//         return false;
+//     }
+//     bool Ravnostoron()
+//     {
+//         if (Existance())
+//         {
+//             if (angle1 == angle2 && angle1 == angle3)
+//             {
+//                 return true;
+//             }
+//             return false;
+//         }
+//         return false;
+//     }
+// };
+// int main()
+// {
+//     Triangle a;
+//     cout << "Enter 3 sides of a triangle: ";
+//     cin >> a.side1 >> a.side2 >> a.side3;
+//     cout << "Enter 3 angles of a triangle: ";
+//     cin >> a.angle1 >> a.angle2 >> a.angle3;
+//     cout << "\nExistance: " << a.Existance();
+//     cout << "\nPerimetre: " << a.P();
+//     cout << "\nRightVerion: " << a.RightVersion();
+//     cout << "\nSquare Area: " << a.aSS();
+//     cout << "\nRavnobedr: " << a.Ravnobedr();
+//     cout << "\nRavnostoron: " << a.Ravnostoron();
 // }
