@@ -1059,3 +1059,52 @@ using namespace std;
 //     cout << "\nRavnobedr: " << a.Ravnobedr();
 //     cout << "\nRavnostoron: " << a.Ravnostoron();
 // }
+class Students{
+    public:
+    string name;
+    int id;
+    int grades[5];
+    double avg;
+    void Sprint(){
+        cout << "-------------------------------------------------------";
+        printf("\n\t\tStudent№ %d:\nName: %s\nGrades: ", id, name.c_str());
+        for (int i = 0; i < 5; i++){
+            cout << grades[i] << ' ';
+        }
+        printf("\nAverage grade: %.4g\n", avg);
+        cout << "-------------------------------------------------------";
+    }
+};
+int main(){
+    srand(time(NULL));
+    Students student[10];
+    string letters = "qwertyuiopasdfghjklzxcvbnm";
+    int nameLength;
+    for (int i = 0; i < 10; i++){
+        nameLength = rand() % 6 + 3;
+        for (int j = 0; j < nameLength; j++){
+            student[i].name += letters[rand() % 28];
+        }
+        nameLength = rand() % 6 + 3;
+        student[i].name += " ";
+        for (int j = 0; j < nameLength; j++){
+            student[i].name += letters[rand() % 28];
+        }
+        student[i].id = i+1;
+        for(int j = 0; j < 5; j++){
+            student[i].grades[j] = rand() % 4 + 2;
+            student[i].avg += student[i].grades[j];
+        }
+        student[i].avg /= 5;
+    }
+    for (int i = 0; i < 9; i++){
+        for (int j = 0; j < 9 - i; j++){
+            if(student[j].avg > student[j+1].avg){
+                swap(student[j], student[j+1]);
+            }
+        }
+    }
+    for (int i = 0; i < 10; i++){
+        student[i].Sprint();
+    }
+}
