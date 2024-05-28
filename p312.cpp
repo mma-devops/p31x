@@ -1061,61 +1061,102 @@ using namespace std;
 // }
 
 
-// Создайте структуру с именем student,
-// содержащую поля: фамилия и имя,
-// номер группы, успеваемость (массив из пяти элементов). Создать массив из десяти
-// элементов такого типа, упорядочить записи
-// по возрастанию среднего балла. Добавить
-// возможность вывода фамилий и номеров групп студентов, имеющих среднюю оценку, равную 
-// больше или равно 4.
-class Students{
-    public:
-    string name;
-    int id;
-    int grades[5];
-    double avg;
-    void Sprint(){
-        cout << "\n-------------------------------------------------------";
-        printf("\n\t\tStudent№ %d:\nName: %s\nGrades: ", id, name.c_str());
-        for (int i = 0; i < 5; i++){
-            cout << grades[i] << ' ';
-        }
-        printf("\nAverage grade: %.4g\n", avg);
-        cout << "-------------------------------------------------------\n";
-    }
-};
-int main(){
-    srand(time(NULL));
-    Students student[10];
-    string letters = "qwertyuiopasdfghjklzxcvbnm";
-    int nameLength;
-    for (int i = 0; i < 10; i++){
-        nameLength = rand() % 6 + 3;
-        for (int j = 0; j < nameLength; j++){
-            student[i].name += letters[rand() % 28];
-        }
-        nameLength = rand() % 6 + 3;
-        student[i].name += " ";
-        for (int j = 0; j < nameLength; j++){
-            student[i].name += letters[rand() % 28];
-        }
-        student[i].id = i+1;
-        for(int j = 0; j < 5; j++){
-            student[i].grades[j] = rand() % 4 + 2;
-            student[i].avg += student[i].grades[j];
-        }
-        student[i].avg /= 5;
-    }
-    for (int i = 0; i < 9; i++){
-        for (int j = 0; j < 9 - i; j++){
-            if(student[j].avg > student[j+1].avg){
-                swap(student[j], student[j+1]);
-            }
-        }
-    }
-    for (int i = 0; i < 10; i++){
-        if (student[i].avg >= 4){
-            student[i].Sprint();
-        }
-    }
-}
+// // Создайте структуру с именем student,
+// // содержащую поля: фамилия и имя,
+// // номер группы, успеваемость (массив из пяти элементов). Создать массив из десяти
+// // элементов такого типа, упорядочить записи
+// // по возрастанию среднего балла. Добавить
+// // возможность вывода фамилий и номеров групп студентов, имеющих среднюю оценку, равную 
+// // больше или равно 4.
+// class Students{
+//     public:
+//     string name;
+//     int id;
+//     int grades[5];
+//     double avg;
+//     void Sprint(){
+//         cout << "\n-------------------------------------------------------";
+//         printf("\n\t\tStudent№ %d:\nName: %s\nGrades: ", id, name.c_str());
+//         for (int i = 0; i < 5; i++){
+//             cout << grades[i] << ' ';
+//         }
+//         printf("\nAverage grade: %.4g\n", avg);
+//         cout << "-------------------------------------------------------\n";
+//     }
+// };
+// int main(){
+//     srand(time(NULL));
+//     Students student[10];
+//     string letters = "qwertyuiopasdfghjklzxcvbnm";
+//     int nameLength;
+//     for (int i = 0; i < 10; i++){
+//         nameLength = rand() % 6 + 3;
+//         for (int j = 0; j < nameLength; j++){
+//             student[i].name += letters[rand() % 28];
+//         }
+//         nameLength = rand() % 6 + 3;
+//         student[i].name += " ";
+//         for (int j = 0; j < nameLength; j++){
+//             student[i].name += letters[rand() % 28];
+//         }
+//         student[i].id = i+1;
+//         for(int j = 0; j < 5; j++){
+//             student[i].grades[j] = rand() % 4 + 2;
+//             student[i].avg += student[i].grades[j];
+//         }
+//         student[i].avg /= 5;
+//     }
+//     for (int i = 0; i < 9; i++){
+//         for (int j = 0; j < 9 - i; j++){
+//             if(student[j].avg > student[j+1].avg){
+//                 swap(student[j], student[j+1]);
+//             }
+//         }
+//     }
+//     for (int i = 0; i < 10; i++){
+//         if (student[i].avg >= 4){
+//             student[i].Sprint();
+//         }
+//     }
+// }
+
+
+// // C помощью метода реализовать ввод данных работника с клавиатуры.
+// // Рассчитать с помощью методов заработную плату, за отработанное время,
+// // и премию, размер которой определяется в зависимости
+// // от стажа (при стаже до 1 года 0%, до 3 лет 5%, до 5 лет 8%, свыше 5 лет 15%).
+// // С помощью метода печати, реализовать вывод информации о работнике на экран.
+// class Worker{
+//     public:
+//     string name;
+//     int salary;
+//     int exp;
+//     int workHours;
+//     int PremCalc(){
+//         if(exp >= 1 && exp < 3){
+//             return salary * workHours * 1.05;
+//         }
+//         else if(exp >= 3 && exp < 5){
+//             return salary * workHours * 1.08;
+//         }
+//         else if(exp >= 5){
+//             return salary * workHours * 1.15;
+//         }
+//         return salary * workHours;
+//     }
+//     void PrintSalary(){
+//         printf("\n______________________________________\nName: %s\nSalary: %d\nPrem: %d\nSalary w/ prem: %d\n______________________________________\n",name, salary * workHours, PremCalc()-(salary * workHours), PremCalc());
+//     }
+// };
+// int main(){
+//     Worker anatoli;
+//     cout << "Enter ur name: ";
+//     getline(cin, anatoli.name);
+//     cout << "Enter ur salary: ";
+//     cin >> anatoli.salary;
+//     cout << "Enter ur experience: ";
+//     cin >> anatoli.exp;
+//     cout << "Enter ur working hours: ";
+//     cin >> anatoli.workHours;
+//     anatoli.PrintSalary();
+// }
